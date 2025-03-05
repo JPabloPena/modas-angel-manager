@@ -1,7 +1,12 @@
+import { BrowserRouter } from 'react-router'
+import Routes from './routes/Routes'
+
 function App () {
   return (
     <>
-      <h1 className='font-bold text-4xl'>Modas Angel Manager</h1>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </>
   )
 }
