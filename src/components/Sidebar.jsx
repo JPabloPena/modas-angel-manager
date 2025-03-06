@@ -21,30 +21,32 @@ const LINKS = [
 ]
 
 function Sidebar () {
-  const activeStyle = 'bg-secondary-bg'
+  const activeStyle = 'bg-primary'
 
   return (
-    <nav className='w-full max-w-72 h-dvh bg-primary-bg px-5 pt-24 pb-12 flex flex-col justify-between'>
-      <ul className='flex flex-col space-y-2'>
+    <nav className='w-full max-w-18 h-full rounded-xl linear-gradient-blue px-5 pt-24 pb-12 flex flex-col justify-between items-center'>
+      <ul className='flex flex-col space-y-4 items-center'>
         {LINKS.map(({ icon, name, to }) =>
           (
-            <li key={name} className='rounded-md overflow-hidden hover:bg-secondary-bg transition-all'>
+            <li key={name} className='group w-12 h-12 rounded-md overflow-hidden hover:bg-primary transition-colors'>
               <NavLink
                 to={to}
                 className={({ isActive }) =>
-                  `flex gap-3 text-sm px-4 py-3 items-center ${isActive ? activeStyle : undefined}`}
+                `w-full h-full flex justify-center items-center p-3 ${isActive ? activeStyle : ''}`}
               >
-                {icon('size-4.5')}
-                <span>{name}</span>
+                {({ isActive }) => (
+                  <>
+                    {icon(`size-6 ${isActive ? 'fill-accent' : 'fill-tertiary'} group-hover:fill-accent`)}
+                  </>
+                )}
               </NavLink>
             </li>
           )
         )}
       </ul>
-      <div className='rounded-md overflow-hidden hover:bg-secondary-bg transition-all hover:cursor-pointer'>
-        <button className='flex gap-3 text-sm px-4 py-3 items-center w-full hover:cursor-pointer'>
-          <LogOut className='size-4.5' />
-          <span>Log out</span>
+      <div className='group w-12 h-12 rounded-md overflow-hidden hover:bg-primary transition-all hover:cursor-pointer hover:stroke-amber-300'>
+        <button className='w-full h-full flex justify-center items-center p-3 hover:cursor-pointer'>
+          <LogOut className='size-6 stroke-tertiary group-hover:stroke-accent' />
         </button>
       </div>
     </nav>
