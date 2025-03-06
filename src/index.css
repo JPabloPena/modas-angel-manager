@@ -2,23 +2,20 @@
 
 @theme {
   /* Background colors */
-  --color-primary-bg: #e2ecf4;
-  --color-secondary-bg: #dcd3ef;
-  --color-terciary-bg: #214345;
-  /* Dark */
-  --color-primary-bg-dark: #03171a;
-  --color-secondary-bg-dark: #0b2e32;
-  --color-terciary-bg-dark: #214345;
+  --color-primary-bg: #060c1b;
+  --color-secondary-bg: #1274f3;
 
   /* Text colors */
-  --color-primary: #03171a;
-  --color-secondary: #0b2e32;
-  --color-accent: #214345;
-  /* Dark */
-  --color-primary-dark: #e2ecf4;
-  --color-secondary-dark: #dcd3ef;
-  --color-accent-dark: #dbd14a;
+  --color-primary: #ffffff;
+  --color-secondary: #4bffb2;
+  --color-tertiary: #7a85a4;
+  --color-accent: #060c1b;
 
   /* Fonts */
-  --font-inter: 'Inter', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+@utility linear-gradient-blue {
+  background: linear-gradient(to top, #232e4d, #232c46, #1f2943, #141a31);
+  opacity: 0.9;
 }
